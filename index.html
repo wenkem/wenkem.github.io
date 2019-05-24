@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <style>
 
@@ -29,7 +30,7 @@
         </div>
     </div>
     <div class="index-banner">
-        <div class="index-banner-bg"><img src="./images/demo1.png" alt="banner" /></div>
+        <div class="index-banner-bg"><img id="banner" src="./images/banner1.png" alt="banner" /></div>
         <div class="index-banner-text">
             <div class="text-logo"></div>
             <p class="text-info">
@@ -116,14 +117,14 @@
             <h3>Featured Dishes</h3>
             <div class="line"></div>
             <div class="btn-group">
-                <a href="" class='btn active'></a>
-                <a href="" class="btn"></a>
-                <a href="" class="btn"></a>
-                <a href="" class="btn"></a>
+                <a href="javascript:change(0)" class='btn active'></a>
+                <a href="javascript:change(1)"  class="btn"></a>
+                <a href="javascript:change(2)"  class="btn"></a>
+                <a href="javascript:change(3)"  class="btn"></a>
             </div>
         </div>
         <div class="index-panel-body index-food-list">
-            <ul class="clearfloat">
+            <ul id="part0" class="clearfloat part">
                 <li class="food-item"><a href="">
                         <img class="banner" src="./images/list1.png" alt="">
                         <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
@@ -173,22 +174,172 @@
                     </a>
                 </li>
             </ul>
+            <ul id="part1" class="clearfloat part">
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list4.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list3.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list2.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list1.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul id="part2" class="clearfloat part">
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list2.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list3.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list4.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list1.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul id="part3" class="clearfloat part">
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list3.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list2.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list4.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="food-item"><a href="">
+                        <img class="banner" src="./images/list1.png" alt="">
+                        <div class="name"><span class="price">$30</span>Fygiat nulla sint</div>
+                        <div class="star-bar">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star nostar"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="public-container index-panel">
-            <div class="index-panel-header">
-                <h3>The Gallery</h3>
-                <div class="line"></div>
-            </div>
-            <div class="index-panel-body index-pics">
-                <a href="" class="pic-col pic-col-m"><img src="./images/demo2.png" alt=""></a>
-                <div class="pic-col pic-col-s">
-                    <a href="" class="pic-row"><img src="./images/demo3.png" alt=""></a>
-                    <a href="" class="pic-row"><img src="./images/demo4.png" alt=""></a>
-                </div>
-                <a href="" class="pic-col pic-col-l"><img src="./images/demo5.png" alt=""></a>
-            </div>
+        <div class="index-panel-header">
+            <h3>The Gallery</h3>
+            <div class="line"></div>
         </div>
+        <div class="index-panel-body index-pics">
+            <a href="" class="pic-col pic-col-m"><img src="./images/demo2.png" alt=""></a>
+            <div class="pic-col pic-col-s">
+                <a href="" class="pic-row"><img src="./images/demo3.png" alt=""></a>
+                <a href="" class="pic-row"><img src="./images/demo4.png" alt=""></a>
+            </div>
+            <a href="" class="pic-col pic-col-l"><img src="./images/demo5.png" alt=""></a>
+        </div>
+    </div>
     <div class="footer">
         <div class="public-container clearfloat">
             <div class="footer-col">
